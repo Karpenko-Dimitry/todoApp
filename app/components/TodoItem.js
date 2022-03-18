@@ -4,9 +4,8 @@ import { Icon } from 'react-native-eva-icons';
 
 export default function TodoItem({ item, pressHandler }) {
     return (
-        
+        <TouchableOpacity>
             <View style={styles.item}>
-                <TouchableOpacity>
                 <Icon
                     name="close-outline"
                     fill="#bbb"
@@ -15,10 +14,9 @@ export default function TodoItem({ item, pressHandler }) {
                     style={styles.icon}
                     onPress={() => pressHandler(item.key)}
                 />
-                 </TouchableOpacity>
                 <Text>{item.text}</Text>
             </View>
-       
+        </TouchableOpacity>
     );
 }
 
